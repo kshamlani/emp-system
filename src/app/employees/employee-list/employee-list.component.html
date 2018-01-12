@@ -1,0 +1,35 @@
+
+<div class="card teal lighten-2">
+  <div class="card-content white-text">
+    <span class="card-title">Employees</span>
+  </div>
+</div>
+
+<div class="card teal lighten-2">
+  <div class="card-content white-text">
+  <table class="bordered responsive-table">
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Salary</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let employee of employeeList">
+              <td>{{ employee.name }}</td>
+              <td>{{ employee.position }}</td>
+              <td>{{ employee.office }}</td>
+              <td>{{ employee.salary }}</td>
+              <td><a class="btn" (click)="onEdit(employee)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+              <td><a class="btn" (click)="onDelete(employee.$key)"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+            </tr>
+          </tbody>
+  </table>
+
+  </div>
+</div>
